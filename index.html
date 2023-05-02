@@ -15,7 +15,7 @@
 <body>
 
     <div id="app">
-       <div class="container">
+       <div class="container my-5">
             <h1 class="text-center">
                 TODO List
             </h1>
@@ -24,6 +24,13 @@
                   {{todo}}
                 </li>
             </ul>
+            <div class="mb-3">
+                <label>Add a new task</label>
+                <div class="d-flex">
+                  <input v-model="newToDo" type="text" placeholder="Write here" >
+                  <button @click="addToDo()" class="btn btn-outline-primary mx-3">Add</button>
+                </div>
+            </div>
        </div>
     </div>
 

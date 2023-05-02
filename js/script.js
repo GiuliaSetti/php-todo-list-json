@@ -3,7 +3,8 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-        todos:[]
+        todos:[],
+        newToDo: '',
     }
   },
 
@@ -16,6 +17,11 @@ createApp({
         this.todos = response.data;
 
       });
+    },
+
+    addToDo(){
+      this.todos.push(this.newToDo);
+      this.newToDo = '';
     }
   },
 
